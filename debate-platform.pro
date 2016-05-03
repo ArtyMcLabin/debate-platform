@@ -22,3 +22,6 @@ HEADERS  += widget.h \
 
 FORMS    += widget.ui \
     node.ui
+
+RESOURCES += \
+    resources.qrc

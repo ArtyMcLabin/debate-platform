@@ -2,6 +2,7 @@
 #define NODE_H
 
 #include <QWidget>
+#include <QFrame>
 #include <QPainter>
 #include <QVector>
 
@@ -12,12 +13,12 @@ namespace Ui {
 class Node;
 }
 
-class Node : public QWidget
+class Node : public QFrame
 {
     Q_OBJECT
 
-    const int NODE_HEIGHT = 50;
-    const int NODE_WIDTH = 100;
+   // const int NODE_HEIGHT = 50;
+   // const int NODE_WIDTH = 100;
 
 	State state;
 
@@ -34,6 +35,7 @@ public:
 
 protected:
     void paintEvent(QPaintEvent*);
+
 
 private:
     Ui::Node *ui;

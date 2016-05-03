@@ -6,16 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>164</width>
-    <height>80</height>
+    <width>190</width>
+    <height>105</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 233, 188);
-</string>
+   <string notr="true">background-color: rgb(241, 223, 156);
+padding: 1px;
+border-style: solid;
+border-width: 3px;
+border-radius: 7px;
+
+QCheckBox {
+	color: rgb(0, 0, 0);
+	background-color: rgb(0, 0, 0);
+	border-color: rgb(0, 0, 0);
+}</string>
   </property>
   <widget class="QCheckBox" name="agreeL">
    <property name="geometry">
@@ -42,7 +51,7 @@ background-color: rgb(255, 255, 255);
     <rect>
      <x>15</x>
      <y>1</y>
-     <width>17</width>
+     <width>16</width>
      <height>17</height>
     </rect>
    </property>
@@ -58,8 +67,8 @@ color: rgb(255, 135, 143);
   <widget class="QLabel" name="expression">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
+     <x>20</x>
+     <y>20</y>
      <width>141</width>
      <height>61</height>
     </rect>
@@ -67,6 +76,7 @@ color: rgb(255, 135, 143);
    <property name="styleSheet">
     <string notr="true">QLabel {
 font: 75 16pt &quot;Ubuntu&quot;;
+rgb(255, 47, 47)
 }</string>
    </property>
    <property name="text">

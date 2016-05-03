@@ -3,11 +3,11 @@
 
 
 Node::Node(QWidget *parent, QString expr) :
-    QWidget(parent),
+	QFrame(parent),
     ui(new Ui::Node)
 {
     ui->setupUi(this);
-	this->resize(NODE_WIDTH,NODE_HEIGHT); //#
+	//this->resize(NODE_WIDTH,NODE_HEIGHT); //#
 
 	ui->expression->setText(expr);
 
@@ -24,6 +24,12 @@ Node::~Node()
 
 void Node::paintEvent(QPaintEvent *)
 {
+	QStyleOption opt;
+	opt.init(this);
     QPainter painter(this);
-    painter.drawRect(0,0,this->width()-1,this->height()-1);
+
+	style()->drawPrimitive(QStyle::PE_Widget, &opt, &painter, this);//ui stylesheet inheritance from QWidget
+
+	//painter.drawRect(0,0,this->width()-1,this->height()-1);
 }
+
