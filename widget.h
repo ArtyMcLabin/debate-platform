@@ -2,7 +2,11 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include <QPainter>
+
 #include "node.h"
+
+
 
 namespace Ui {
 	class Widget;
@@ -18,6 +22,9 @@ public:
 
 private:
 	Ui::Widget *ui;
+
+protected:
+	void paintEvent(QPaintEvent*);
 };
 
 #endif // WIDGET_H

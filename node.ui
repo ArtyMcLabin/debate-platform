@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Node</class>
+ <widget class="QWidget" name="Node">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>164</width>
+    <height>80</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 233, 188);
+</string>
+  </property>
+  <widget class="QCheckBox" name="agreeL">
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>1</y>
+     <width>17</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox{
+color: rgb(255, 135, 143);
+background-color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="agreeR">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>1</y>
+     <width>17</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox{
+color: rgb(255, 135, 143);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="expression">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>141</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+font: 75 16pt &quot;Ubuntu&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>expression</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>agreeR</tabstop>
+  <tabstop>agreeL</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

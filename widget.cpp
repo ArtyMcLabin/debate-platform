@@ -1,6 +1,10 @@
 #include "widget.h"
 #include "ui_widget.h"
 
+//globals
+QVector<Node*>* nodes = new QVector<Node*>;
+
+
 Widget::Widget(QWidget *parent) :
 	QWidget(parent),
 	ui(new Ui::Widget)
@@ -9,9 +13,24 @@ Widget::Widget(QWidget *parent) :
 
 
 
-	Node* root = new Node(this);
-	root->show();
 
+	Node* root = new Node(this);
+	Node* middle = new Node(this,"middle");
+	Node* leaf = new Node(this);
+
+	nodes->append(root);
+	nodes->append(middle);
+	nodes->append(leaf);
+
+	root->move(40,40);
+	middle->move(40,300);
+	leaf->move(250,500);
+
+
+	leaf->proofs->append(root);
+	leaf->proofs->append(middle);
+
+	middle->proofs->append(root);
 
 
 }
@@ -19,4 +38,21 @@ Widget::Widget(QWidget *parent) :
 Widget::~Widget()
 {
 	delete ui;
+}
+
+void Widget::paintEvent(QPaintEvent *)
+{
+	QPainter painter(this);
+	Node* node;
+	QVector<Node*>::iterator proof;
+
+	painter.setPen(Qt::blue);
+
+	foreach(node,*nodes)
+		for(proof = node->proofs->begin(); proof != node->proofs->end(); proof++)
+			painter.drawLine((*proof)->pos()+QPoint((*proof)->width()/2,(*proof)->height()), node->pos()+QPoint(node->width()/2,0));
+
+	//foreach(proof,*(node->proofs))
+	//	;
+
 }

@@ -20,4 +20,5 @@ SOURCES += main.cpp\
 HEADERS  += widget.h \
     node.h
 
-FORMS    += widget.ui
+FORMS    += widget.ui \
+    node.ui
