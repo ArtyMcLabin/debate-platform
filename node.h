@@ -5,8 +5,10 @@
 #include <QFrame>
 #include <QPainter>
 #include <QVector>
+#include <QLineEdit>
 
 enum class State {ACCEPTED, DECLINED}; //+
+
 
 
 namespace Ui {
@@ -28,10 +30,10 @@ public:
 	explicit Node(QWidget *parent = 0, QString expr = "");
 
 
-
     ~Node();
 
 	QVector<Node*>* proofs = new QVector<Node*>; //upper hierarchy
+
 
 protected:
     void paintEvent(QPaintEvent*);
@@ -40,5 +42,8 @@ protected:
 private:
     Ui::Node *ui;
 };
+
+//+ QVector<Node*>::operator << (Node* node);
+
 
 #endif // NODE_H

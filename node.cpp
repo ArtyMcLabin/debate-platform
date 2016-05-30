@@ -16,6 +16,9 @@ Node::Node(QWidget *parent, QString expr) :
 
 
 
+
+
+
 Node::~Node()
 {
 	delete ui;
@@ -33,3 +36,10 @@ void Node::paintEvent(QPaintEvent *)
 	//painter.drawRect(0,0,this->width()-1,this->height()-1);
 }
 
+
+
+//+
+//QVector<Node*>::operator<<(Node* node)
+//{
+//	this->append(node);
+//}

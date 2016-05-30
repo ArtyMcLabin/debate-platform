@@ -73,7 +73,7 @@ void Widget::mouseReleaseEvent(QMouseEvent *event)
 {
 	if(currentNode != NULL) //set the slected note as proof to the one under release point
 	{
-		if(event->)
+		if(QApplication::widgetAt(event->pos()):)
 
 
 
