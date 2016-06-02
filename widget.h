@@ -4,8 +4,10 @@
 #include <QWidget>
 #include <QPainter>
 #include <QMouseEvent>
+#include <QApplication>
 
 #include "node.h"
+#include "debug.h"
 
 
 
@@ -27,6 +29,7 @@ private:
 protected:
 	void paintEvent(QPaintEvent*);
 	void mouseDoubleClickEvent(QMouseEvent* event);
+	void mouseReleaseEvent(QMouseEvent* event);
 };
 
 #endif // WIDGET_H

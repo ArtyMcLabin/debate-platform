@@ -12,7 +12,7 @@ Widget::Widget(QWidget *parent) :
 {
 	ui->setupUi(this);
 
-
+	setupDebug(ui);
 
 
 	Node* root = new Node(this);
@@ -73,8 +73,9 @@ void Widget::mouseReleaseEvent(QMouseEvent *event)
 {
 	if(currentNode != NULL) //set the slected note as proof to the one under release point
 	{
-		if(event->)
-
+		Node* under = NULL;
+		if(under = dynamic_cast<Node*>(QApplication::widgetAt(event->pos())) != NULL)
+			D("under is Node");
 
 
 		currentNode = NULL;

@@ -15,10 +15,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         widget.cpp \
-    node.cpp
+    node.cpp \
+    debug.cpp
 
 HEADERS  += widget.h \
-    node.h
+    node.h \
+    debug.h
 
 FORMS    += widget.ui \
     node.ui
